@@ -1,0 +1,232 @@
+[
+  {
+    "fields": [
+      {
+        "name": "date",
+        "type": "string",
+        "title": "日期"
+      },
+      {
+        "name": "tag",
+        "type": "string",
+        "title": "標籤"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "title": "標題"
+      },
+      {
+        "name": "excerpt",
+        "type": "text",
+        "title": "摘要"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "外部連結"
+      },
+      {
+        "initialValue": "發布",
+        "name": "status",
+        "type": "string",
+        "title": "狀態"
+      }
+    ],
+    "name": "news",
+    "type": "document",
+    "title": "最新消息"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "生產者名稱"
+      },
+      {
+        "name": "product",
+        "type": "string",
+        "title": "產品類別"
+      },
+      {
+        "name": "expiry",
+        "type": "string",
+        "title": "到期日"
+      },
+      {
+        "name": "region",
+        "type": "string",
+        "title": "地區"
+      },
+      {
+        "initialValue": "有效",
+        "name": "status",
+        "type": "string",
+        "title": "狀態"
+      },
+      {
+        "options": {
+          "list": [
+            "traceability",
+            "organic",
+            "terminated",
+            "suspended"
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "驗證類別"
+      }
+    ],
+    "name": "directory",
+    "type": "document",
+    "title": "通過名錄"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "文件名稱"
+      },
+      {
+        "initialValue": "PDF",
+        "name": "format",
+        "type": "string",
+        "title": "格式"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "name": "url",
+        "type": "url",
+        "title": "下載連結"
+      },
+      {
+        "options": {
+          "list": [
+            "traceability",
+            "organic",
+            "other"
+          ]
+        },
+        "name": "category",
+        "type": "string",
+        "title": "分類"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "排序"
+      }
+    ],
+    "name": "download",
+    "type": "document",
+    "title": "文件下載"
+  },
+  {
+    "fields": [
+      {
+        "name": "quote",
+        "type": "text",
+        "title": "主標語"
+      },
+      {
+        "name": "intro",
+        "type": "text",
+        "title": "公司簡介"
+      },
+      {
+        "name": "value1",
+        "type": "text",
+        "title": "核心理念一"
+      },
+      {
+        "name": "value2",
+        "type": "text",
+        "title": "核心理念二"
+      },
+      {
+        "name": "value3",
+        "type": "text",
+        "title": "核心理念三"
+      }
+    ],
+    "name": "about",
+    "type": "document",
+    "title": "關於我們"
+  },
+  {
+    "fields": [
+      {
+        "name": "email",
+        "type": "string",
+        "title": "聯絡信箱"
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "title": "地址"
+      },
+      {
+        "name": "hours",
+        "type": "string",
+        "title": "服務時間"
+      },
+      {
+        "name": "heroTitle",
+        "type": "string",
+        "title": "首頁主標題"
+      },
+      {
+        "name": "heroSubtitle",
+        "type": "text",
+        "title": "首頁副標題"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document",
+    "title": "網站基本設定"
+  }
+]
